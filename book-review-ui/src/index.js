@@ -1,16 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from "react-router-dom";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Authors from './routes/Authors'
+import Books from './routes/Books'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
+    <Routes>
+      <Route path="/" element={<App />} />
+      <Route path="authors" element={<Authors />} />
+      <Route path="books" element={<Books />} />
+    </Routes>
   </BrowserRouter>
 );
 
