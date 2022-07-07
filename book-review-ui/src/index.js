@@ -13,6 +13,19 @@ const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
   cache: new InMemoryCache(),
 });
+client
+  .query({
+    query: gql`
+    query {
+        author(id: 1) {
+          name
+          books {
+            name
+          }
+        }
+      }
+   `,
+  }).then((result) => console.log(result));
 root.render(
   <BrowserRouter>
     <Routes>
