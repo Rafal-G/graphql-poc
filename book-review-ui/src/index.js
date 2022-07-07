@@ -6,8 +6,13 @@ import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Authors from './routes/Authors'
 import Books from './routes/Books'
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const client = new ApolloClient({
+  uri: 'http://localhost:5000/graphql',
+  cache: new InMemoryCache(),
+});
 root.render(
   <BrowserRouter>
     <Routes>
