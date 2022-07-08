@@ -13,27 +13,18 @@ const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
   cache: new InMemoryCache(),
 });
-client
-  .query({
-    query: gql`
-    query {
-        author(id: 1) {
-          name
-          books {
-            name
-          }
-        }
-      }
-   `,
-  }).then((result) => console.log(result));
+
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="authors" element={<Authors />} />
-      <Route path="books" element={<Books />} />
-    </Routes>
-  </BrowserRouter>
+  <ApolloProvider client={client}>  
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="authors" element={<Authors />} />
+        <Route path="books" element={<Books />} />
+      </Routes>
+    </BrowserRouter>
+  </ApolloProvider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
