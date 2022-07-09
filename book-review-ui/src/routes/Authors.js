@@ -19,15 +19,11 @@ function GetAuthors() {
     if (loading) return <p>Loading...</p>;
 
     if (error) return <p>Error :(</p>;
-    data.authors.map((author) => {
-        console.log('author', author)
-    })
-
-    return data.authors.map(({id, name}) => {
-        <div key={id}>        
-            <p>{id} {name}</p>
+    return data.authors.map(({id, name, books}) => (
+        <div key={id}>
+            <h3> { name } </h3>
         </div>
-    })
+    ))
 }
 class Authors extends React.Component {
     render() {
