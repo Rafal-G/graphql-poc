@@ -5,6 +5,7 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Authors from './routes/Authors'
+import Author from './routes/Author'
 import Books from './routes/Books'
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 
@@ -19,7 +20,9 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="authors" element={<Authors />} />
+        <Route path="authors" element={<Authors />} >
+          <Route path=":authorId" element={ <Author /> }/>
+        </Route>
         <Route path="books" element={<Books />} />
       </Routes>
     </BrowserRouter>

@@ -1,5 +1,9 @@
 Next step:
-- Send request to GraphQL from React component
+- Load specific author based on id in url
+
+Additional Stuff:
+- Add prettier
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
