@@ -24,6 +24,14 @@ root.render(
           <Route path=":authorId" element={ <Author /> }/>
         </Route>
         <Route path="books" element={<Books />} />
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: "1rem" }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </ApolloProvider>
