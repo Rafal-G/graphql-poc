@@ -6,7 +6,6 @@ class Author extends React.Component {
         return (
         <div>
             asdfasdf
-            <TopNav></TopNav>
             <p>Single Author</p>
         </div>
         )

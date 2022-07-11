@@ -19,11 +19,12 @@ root.render(
   <ApolloProvider client={client}>  
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="authors" element={<Authors />} >
-          <Route path=":authorId" element={ <Author /> }/>
+        <Route path="/" element={<App />} >
+          <Route path="authors" element={<Authors />} >
+            <Route path=":authorId" element={ <Author /> }/>
+          </Route>
+          <Route path="books" element={<Books />} />
         </Route>
-        <Route path="books" element={<Books />} />
         <Route
           path="*"
           element={
