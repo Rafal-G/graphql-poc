@@ -25,6 +25,7 @@ function GetAuthors() {
         </div>
     ))
 }
+
 class Authors extends React.Component {
     render() {
         return (
