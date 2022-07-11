@@ -1,5 +1,6 @@
 import React from 'react';
 import {useQuery, gql} from '@apollo/client'
+import { Outlet } from 'react-router-dom';
 
 const GET_AUTHORS = gql`
     query {
@@ -30,6 +31,7 @@ class Authors extends React.Component {
         <div>
             <GetAuthors></GetAuthors>
             <p>The Authors info will go here</p>
+            <Outlet />
         </div>
 
         )
