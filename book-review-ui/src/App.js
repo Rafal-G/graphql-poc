@@ -1,8 +1,12 @@
 import './App.css';
 import TopNav from './components/TopNav';
+import { Outlet } from 'react-router-dom'
 function App() {
   return (
-    <TopNav></TopNav>
+    <div>
+      <TopNav />
+      <Outlet />
+    </div>
   );
 }
 

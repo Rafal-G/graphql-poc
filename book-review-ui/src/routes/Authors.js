@@ -1,5 +1,4 @@
 import React from 'react';
-import TopNav from '../components/TopNav';
 import {useQuery, gql} from '@apollo/client'
 
 const GET_AUTHORS = gql`
@@ -29,7 +28,6 @@ class Authors extends React.Component {
     render() {
         return (
         <div>
-            <TopNav></TopNav>
             <GetAuthors></GetAuthors>
             <p>The Authors info will go here</p>
         </div>
