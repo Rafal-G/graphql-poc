@@ -15,9 +15,9 @@ class Author extends React.Component {
     render() {
         
         return(
-            <div>
+            <main style={{padding: "1rem"}}>
                 <AuthorDetail />
-            </div>
+            </main>
         )
     }
 }

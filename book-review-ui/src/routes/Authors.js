@@ -1,6 +1,6 @@
 import React from 'react';
 import {useQuery, gql} from '@apollo/client'
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 
 const GET_AUTHORS = gql`
     query {
@@ -20,13 +20,19 @@ function GetAuthors() {
 
     if (error) return <p>Error :(</p>;
     return data.authors.map(({id, name, books}) => (
-        <Link 
+        <NavLink
+            style={({ isActive }) => {
+            return {
+                display: "block",
+                margin: "1rem 0",
+                color: isActive ? "red" : "",
+            };
+            }}
             key={id}
-            style={{display: "block", margin: "1rem 0"}}
             to={`/authors/${id}`}
         >
             { name }
-        </Link>
+        </NavLink>
     ))
 }
 
