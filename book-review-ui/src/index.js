@@ -21,6 +21,14 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} >
           <Route path="authors" element={<Authors />} >
+            <Route
+              index
+              element= {
+                <main style={{ padding: "1rem" }}>
+                  <p>Select an author</p>
+                </main>
+              }
+            />
             <Route path=":authorId" element={ <Author /> }/>
           </Route>
           <Route path="books" element={<Books />} />
