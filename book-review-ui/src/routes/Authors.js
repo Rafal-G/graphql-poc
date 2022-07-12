@@ -41,7 +41,6 @@ class Authors extends React.Component {
             }}>
                 <GetAuthors></GetAuthors>
             </nav>
-            <p>The Authors info will go here</p>
             <Outlet />
         </div>
 

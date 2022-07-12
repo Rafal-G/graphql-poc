@@ -1,5 +1,6 @@
 Next step:
 - Load specific author based on id in url
+- Move styles out
 
 Additional Stuff:
 - Add prettier
